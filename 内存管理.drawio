@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-18T14:17:46.263Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="unoKTGkmSgP-hhnwDnLX" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-18T14:35:52.638Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="8zWjuQc-SgMLOL0yh0Lq" version="20.0.1" type="github">
   <diagram id="J5he_4LYLgv7OwmiaTkl" name="第 1 页">
     <mxGraphModel dx="1355" dy="805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -6,6 +6,18 @@
         <mxCell id="1" parent="0" />
         <mxCell id="tKIJGh4Zg1W7XA4cx53i-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 23px;&quot;&gt;虚拟内存&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="10" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tKIJGh4Zg1W7XA4cx53i-2" value="1、执行指令必须在物理内存中&lt;br&gt;&lt;br&gt;方法1：将整个程序载入物理内存，但这会要求程序必须在物理内存的大小以内，超过了物理内存就会导致加载出现问题。&lt;br&gt;&lt;br&gt;方法2：部分载入物理内存，原因如下：&lt;br&gt;a、程序通常有处理异常错误条件的代码。但这部分代码几乎不会执行，是因为出现错误的概率是很小的；&lt;br&gt;b、数组、链表和表通常分配了比实际所需要的更多的内存。声明一个有100*100个元素的数组，可能实际使用的只有10*10个元素 。另外汇编系统表可能有3000个符号空间，但是程序平均可能用到的只有不到200个符号；&lt;br&gt;c、程序的某些选项或者功能很少使用。&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="20" y="70" width="800" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="tKIJGh4Zg1W7XA4cx53i-4" value="&lt;h1&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;能够执行只有部分在内存中的程序会带来如下好处&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;a、程序不再受现有的物理内存空间限制。用户可以为一个巨大的虚拟地址空间编写程序，简化了编程工作量；&lt;/p&gt;&lt;p&gt;b、部分载入即可执行，每个用户程序使用了更少的物理内存，所以更多的程序可以同时执行，CPU使用率也相应增加，而响应时间或者周转时间并不增加；&lt;/p&gt;&lt;p&gt;c、由于载入或交换每个用户程序到内存内所需的IO会更少，用户程序会运行得更快。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="27" y="400" width="800" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="tKIJGh4Zg1W7XA4cx53i-5" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fontSize=16;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="419.5" y="280" as="sourcePoint" />
+            <mxPoint x="419.5" y="390" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
