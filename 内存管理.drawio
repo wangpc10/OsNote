@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-21T07:13:51.187Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="zrcTJT9a0g0jbxJA2lyJ" version="20.0.1" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-06-21T07:45:15.022Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36" etag="nr5uT0DPaN1IeDQ2EP9h" version="20.0.1" type="github" pages="2">
   <diagram id="J5he_4LYLgv7OwmiaTkl" name="第 1 页">
     <mxGraphModel dx="1422" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -30,8 +30,64 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="jrYI0IyV46vCkBkHq_zo-1" value="Agent" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="40" width="130" height="40" as="geometry" />
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-1" value="VcsAgent" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="130" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-2" value="VcsVideo" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="697" y="40" width="130" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.006;entryY=0.148;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="185" y="61" as="sourcePoint" />
+            <mxPoint x="691.22" y="60.200000000000045" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-4" value="下发控制命令，video调用SetVideoInfo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="259" y="36" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-6" value="SetVideoInfo流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="510" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrYI0IyV46vCkBkHq_zo-7" target="jrYI0IyV46vCkBkHq_zo-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-7" value="判断是否已有cameraPhase&lt;br&gt;摄像头" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="650" width="180" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrYI0IyV46vCkBkHq_zo-8" target="jrYI0IyV46vCkBkHq_zo-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-8" value="输入cameraPhase,playSwitch,&lt;br&gt;duration,mediaUrl" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="200" y="550" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrYI0IyV46vCkBkHq_zo-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-11" value="创建StreamProcessor对象*sp" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="810" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="jrYI0IyV46vCkBkHq_zo-16" target="jrYI0IyV46vCkBkHq_zo-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-16" value="&lt;div style=&quot;font-family: &amp;quot;Operator Mono&amp;quot;, &amp;quot;Dank Mono&amp;quot;, &amp;quot;Fira Code Light&amp;quot;, &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 15.4px; line-height: 20px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;sp-&amp;gt;SetPlaySwitch(true);&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;        &lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;sp-&amp;gt;ConstructURL(mediaUrl);&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;        &lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;sp-&amp;gt;SetCurrentCamera(cameraPhase);&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;        &lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;sp-&amp;gt;SetTimeout(duration);&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="151" y="950" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="jrYI0IyV46vCkBkHq_zo-17" target="jrYI0IyV46vCkBkHq_zo-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-17" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;初始化网络&lt;span style=&quot;font-family: &amp;quot;Operator Mono&amp;quot;, &amp;quot;Dank Mono&amp;quot;, &amp;quot;Fira Code Light&amp;quot;, &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 15.4px;&quot;&gt;sp&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Operator Mono&amp;quot;, &amp;quot;Dank Mono&amp;quot;, &amp;quot;Fira Code Light&amp;quot;, &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 15.4px;&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Operator Mono&amp;quot;, &amp;quot;Dank Mono&amp;quot;, &amp;quot;Fira Code Light&amp;quot;, &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 15.4px;&quot;&gt;NetworkInit&lt;/span&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="211" y="1169" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#000000;" edge="1" parent="1" source="jrYI0IyV46vCkBkHq_zo-19" target="jrYI0IyV46vCkBkHq_zo-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-19" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;初始化网络&lt;span style=&quot;font-family: &amp;quot;Operator Mono&amp;quot;, &amp;quot;Dank Mono&amp;quot;, &amp;quot;Fira Code Light&amp;quot;, &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 15.4px;&quot;&gt;sp&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Operator Mono&amp;quot;, &amp;quot;Dank Mono&amp;quot;, &amp;quot;Fira Code Light&amp;quot;, &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 15.4px;&quot;&gt;-&amp;gt;Encoder&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Operator Mono&amp;quot;, &amp;quot;Dank Mono&amp;quot;, &amp;quot;Fira Code Light&amp;quot;, &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 15.4px;&quot;&gt;Init&lt;/span&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="211" y="1310" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jrYI0IyV46vCkBkHq_zo-21" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;压入缓冲队列&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="211" y="1440" width="180" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
